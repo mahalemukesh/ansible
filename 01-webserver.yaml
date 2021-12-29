@@ -1,0 +1,7 @@
+--- #Webserver installtion playbook
+- name: Webserver installtion
+  hosts: web
+  tasks: 
+  - name: Install httpd 
+    yum: pkg=httpd state=absent update_cache=true
+...

@@ -1,0 +1,11 @@
+--- # variable passing from commandling
+- name: Variable passing from commandline
+- hosts: "{{ hosts }}"
+  user: "{{ user }}"
+  connection: ssh
+  become: yes
+  gather_facts: no
+  
+  tasks:
+   - name: install httpd 
+     action: yum name={{ pkg }} state=latest

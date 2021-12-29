@@ -1,0 +1,13 @@
+--- # find 
+- name: Find Example
+- hosts: web
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: no
+  
+  tasks:
+   - name: " find passwd file in /etc"
+     action: find path="/etc" pattern="passwd*"
+     register: result
+   - debug: var=result

@@ -1,0 +1,7 @@
+--- # target section
+- name: Target defination
+  hosts: web
+  user: user
+  connection: ssh
+  gather_facts: no
+  become: yes

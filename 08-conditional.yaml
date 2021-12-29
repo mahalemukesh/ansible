@@ -1,0 +1,18 @@
+--- # conditional example
+- name: Conditional defination
+  hosts: web
+  user: user
+  connection: ssh
+  gather_facts: yes
+  become: yes
+ 
+  tasks:
+   - name: installation of httpd with appropiate OS (Redhat/Centos)
+     action: yum name=httpd state=latest update_cache=yes
+     when: ansible_os_family=="RedHat"
+     
+    tasks:
+   - name: installation of apache2 with appropiate OS (debian/ubuntu)
+     action: yum name=httpd state=latest update_cache=yes
+     when: ansible_distribution=="Debain" or
+           ansible_distribution=="Ubuntu"

@@ -1,0 +1,15 @@
+--- # handling error
+- name: Handling Erros
+  hosts: web
+  user: user
+  connection: ssh
+  become: yes
+  gather_facts: no
+
+  tasks:
+   - name: command always failed
+     command: /usr/bin/false
+     ignore_errors: yes
+
+   - name: install httpd
+     action: yum name=httpd state=latest update_cache=yes

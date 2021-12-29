@@ -1,0 +1,194 @@
+#####################
+# Commands modules
+# https://docs.ansible.com/ansible/2.8/modules/list_of_commands_modules.html
+#####################
+command – Execute commands on targets
+expect – Executes a command and responds to prompts
+psexec – Runs commands on a remote Windows host based on the PsExec model
+raw – Executes a low-down and dirty command
+script – Runs a local script on a remote node after transferring it
+shell – Execute shell commands on targets
+telnet – Executes a low-down and dirty telnet command
+
+#####################
+# Files modules
+# https://docs.ansible.com/ansible/2.8/modules/list_of_files_modules.html
+#####################
+acl – Set and retrieve file ACL information
+archive – Creates a compressed archive of one or more files or trees
+assemble – Assemble configuration files from fragments
+blockinfile – Insert/update/remove a text block surrounded by marker lines
+copy – Copy files to remote locations
+fetch – Fetch files from remote nodes
+file – Manage files and file properties
+find – Return a list of files based on specific criteria
+ini_file – Tweak settings in INI files
+iso_extract – Extract files from an ISO image
+lineinfile – Manage lines in text files
+patch – Apply patch files using the GNU patch tool
+read_csv – Read a CSV file
+replace – Replace all instances of a particular string in a file using a back-referenced regular expression
+stat – Retrieve file or file system status
+synchronize – A wrapper around rsync to make common tasks in your playbooks quick and easy
+tempfile – Creates temporary files and directories
+template – Template a file out to a remote server
+unarchive – Unpacks an archive after (optionally) copying it from the local machine
+xattr – Manage user defined extended attributes
+xml – Manage bits and pieces of XML files or strings
+
+#####################
+# System modules
+# https://docs.ansible.com/ansible/2.8/modules/list_of_system_modules.html
+#####################
+capabilities – Manage Linux capabilities
+cron – Manage cron.d and crontab entries
+cronvar – Manage variables in crontabs
+crypttab – Encrypted Linux block devices
+filesystem – Makes a filesystem
+firewalld – Manage arbitrary ports/services with firewalld
+gather_facts – Gathers facts about remote hosts
+gconftool2 – Edit GNOME Configurations
+group – Add or remove groups
+hostname – Manage hostname
+interfaces_file – Tweak settings in /etc/network/interfaces files
+iptables – Modify iptables rules
+java_cert – Uses keytool to import/remove key from java keystore (cacerts)
+java_keystore – Create or delete a Java keystore in JKS format
+kernel_blacklist – Blacklist kernel modules
+known_hosts – Add or remove a host from the known_hosts file
+locale_gen – Creates or removes locales
+
+lvg – Configure LVM volume groups
+lvol – Configure LVM logical volumes
+
+make – Run targets in a Makefile
+mksysb – Generates AIX mksysb rootvg backups
+modprobe – Load or unload kernel modules
+mount – Control active and configured mount points
+open_iscsi – Manage iSCSI targets with Open-iSCSI
+pam_limits – Modify Linux PAM limits
+pamd – Manage PAM Modules
+parted – Configure block device partitions
+
+pids – Retrieves process IDs list if the process is running otherwise return empty list
+ping – Try to connect to host, verify a usable python and return pong on success
+
+puppet – Runs puppet
+python_requirements_facts – Show python path and assert dependency versions
+
+reboot – Reboot a machine
+
+seboolean – Toggles SELinux booleans
+sefcontext – Manages SELinux file context mapping definitions
+selinux – Change policy and state of SELinux
+selinux_permissive – Change permissive domain in SELinux policy
+selogin – Manages linux user to SELinux user mapping
+seport – Manages SELinux network port type definitions
+
+service – Manage services
+service_facts – Return service state information as fact data
+
+setup – Gathers facts about remote hosts
+sysctl – Manage entries in sysctl.conf
+systemd – Manage services
+sysvinit – Manage SysV services
+timezone – Configure timezone setting
+ufw – Manage firewall with UFW
+
+user – Manage user accounts
+
+xfconf – Edit XFCE4 Configurations
+xfs_quota – Manage quotas on XFS filesystems
+
+#########################
+# Packaging modules
+# https://docs.ansible.com/ansible/2.8/modules/list_of_packaging_modules.html
+#########################
+# Language based
+bower – Manage bower packages with bower
+bundler – Manage Ruby Gem dependencies with Bundler
+composer – Dependency Manager for PHP
+cpanm – Manages Perl library dependencies
+easy_install – Installs Python libraries
+gem – Manage Ruby gems
+maven_artifact – Downloads an Artifact from a Maven Repository
+npm – Manage node.js packages with npm
+pear – Manage pear/pecl packages
+
+pip – Manages Python library dependencies
+pip_package_info – pip package information
+
+yarn – Manage node.js packages with Yarn
+
+# OS based
+apk – Manages apk packages
+apt – Manages apt-packages
+apt_key – Add or remove an apt key
+apt_repo – Manage APT repositories via apt-repo
+apt_repository – Add and remove APT repositories
+apt_rpm – apt_rpm package manager
+
+dnf – Manages packages with the dnf package manager
+dpkg_selections – Dpkg package selection selections
+
+flatpak – Manage flatpaks
+flatpak_remote – Manage flatpak repository remotes
+
+homebrew – Package manager for Homebrew
+homebrew_cask – Install/uninstall homebrew casks
+homebrew_tap – Tap a Homebrew repository
+
+installp – Manage packages on AIX
+
+layman – Manage Gentoo overlays
+
+macports – Package manager for MacPorts
+
+openbsd_pkg – Manage packages on OpenBSD
+
+opkg – Package manager for OpenWrt
+
+package – Generic OS package manager
+package_facts – package information as facts
+
+pacman – Manage packages with pacman
+
+pkg5 – Manages packages with the Solaris 11 Image Packaging System
+pkg5_publisher – Manages Solaris 11 Image Packaging System publishers
+
+pkgin – Package manager for SmartOS, NetBSD, et al
+pkgng – Package manager for FreeBSD >= 9.0
+pkgutil – Manage CSW-Packages on Solaris
+portage – Package manager for Gentoo
+portinstall – Installing packages from FreeBSD’s ports system
+
+pulp_repo – Add or remove Pulp repos from a remote host
+
+redhat_subscription – Manage registration and subscriptions to RHSM using the subscription-manager command
+rhn_channel – Adds or removes Red Hat software channels
+rhn_register – Manage Red Hat Network registration using the rhnreg_ks command
+rhsm_release – Set or Unset RHSM Release version
+rhsm_repository – Manage RHSM repositories using the subscription-manager command
+
+rpm_key – Adds or removes a gpg key from the rpm db
+
+slackpkg – Package manager for Slackware >= 12.2
+
+snap – Manages snaps
+
+sorcery – Package manager for Source Mage GNU/Linux
+
+svr4pkg – Manage Solaris SVR4 packages
+
+swdepot – Manage packages with swdepot package manager (HP-UX)
+swupd – Manages updates and bundles in ClearLinux systems
+
+urpmi – Urpmi manager
+
+xbps – Manage packages with XBPS
+
+yum – Manages packages with the yum package manager
+yum_repository – Add or remove YUM repositories
+
+zypper – Manage packages on SUSE and openSUSE
+zypper_repository – Add and remove Zypper repositories

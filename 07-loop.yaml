@@ -1,0 +1,14 @@
+--- # loop exmple 
+- name: Loop defination
+  hosts: web
+  user: user
+  connection: ssh
+  gather_facts: no
+  become: yes
+  tasks:
+   - name: installation of multiple package i.e httpd, telnet, ssh
+     action: yum name={{ item }} state=absent update_cache=yes
+     with_items:
+       - httpd
+       - telnet
+       - ssh

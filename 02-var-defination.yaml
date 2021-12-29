@@ -1,0 +1,10 @@
+--- # Variable example
+- hosts: web
+  vars:
+   pkg_name: httpd
+  tasks:
+   - name: Installtion of httpd using variable
+     yum: 
+      name: "{{ pkg_name }}" 
+      state: absent 
+      update_cache: True

@@ -1,0 +1,7 @@
+--- # Variable called from file
+- hosts: web 
+  vars_files:
+   - var.yaml
+  tasks: 
+   - name: installation of httpd using varible declarition from file
+     apt: name={{ pkg_name }} state=absent update_cache=yes

@@ -1,0 +1,14 @@
+--- #target example
+- name: Ensure apache is installed and started
+  hosts: web
+  become: yes
+
+  vars:
+    http_port: 80
+    http_docroot: /var/www/mysite.com
+  
+  tasks:
+  - name: Verify correct config file is present
+    template:
+      src: templates/httpd.conf.j2
+      dest: /etc/httpd/conf/httpd.conf

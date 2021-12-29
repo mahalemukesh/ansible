@@ -1,6 +1,10 @@
 --- # handeler defination
-- name: variable playbook test
-  hosts: localhost
+- name: Handler playbook test
+  hosts: web
+  user: user
+  connection: ssh
+  gather_facts: yes
+  become: yes
   
   tasks:
   - name: Ensure httpd package is present

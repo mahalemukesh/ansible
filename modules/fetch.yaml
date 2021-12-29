@@ -1,0 +1,10 @@
+--- #to fetch data from remote host example
+- name: Fetch example
+  hosts: web
+  user: user
+  become: yes 
+  connection: ssh
+  gather_facts: no
+  
+  tasks:
+   - fetch: src=/etc/hosts dest=/home/user/hosts.example

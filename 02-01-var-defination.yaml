@@ -1,0 +1,19 @@
+---
+- name: Ensure users
+  hosts: db
+  become: yes
+  tasks:
+  - name: Ensure user is present
+    user:
+    name: dev_user
+    state: present
+    
+  - name: Ensure user is present
+    user:
+    name: qa_user
+    state: present
+
+  - name: Ensure user is present
+    user:
+    name: prod_user
+    state: present

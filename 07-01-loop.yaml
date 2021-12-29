@@ -1,0 +1,14 @@
+---
+- name: Ensure users
+  hosts: db
+  become: yes
+  
+  tasks:
+  - name: Ensure user is present
+    user:
+      name: “{{item}}”
+      state: present
+    loop:
+      - dev_user
+      - qa_user
+      - prod_user
